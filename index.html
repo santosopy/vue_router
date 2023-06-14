@@ -1,0 +1,257 @@
+<?php get_header() ?>
+
+<div id="app">
+
+    <div id="main_col" 
+	:style="$route.path === '/' ? 'float: none;width: 950px;margin: 0 auto;' : ''">
+        
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <h2 class="post_title" id="page_title"><?php the_title(); ?></h2>
+        <?php endwhile; endif; ?>
+        
+        <div class="clearfix post_content">
+            <router-view></router-view>
+        </div>
+        <div style="display:none">
+            <div id="soshikiTable">
+				<div class="member_top">
+					<ul>
+						<li>
+							<h3><router-link to="/osaka">大阪支部　会員情報</router-link></h3>
+							<p>OSAKA BRANCH</p>
+						</li>
+						<li>
+							<h3><router-link to="/nagoya">名古屋支部　会員情報</router-link></h3>
+							<p>NAGOYA BRANCH</p>
+						</li>
+						<li>
+							<h3><router-link to="/shikoku">長野支部　会員情報</router-link></h3>
+							<p>NAGANO BRANCH</p>
+						</li>
+						<li>
+							<h3><router-link to="/nagano">四国支部　会員情報</router-link></h3>
+							<p>SHIKOKU BRANCH</p>
+						</li>
+						<li>
+							<h3><router-link to="/shiga">広島支部　会員情報</router-link></h3>
+							<p>HIROSHIMA BRANCH</p>
+						</li>
+						<li>
+							<h3><router-link to="/hiroshima">滋賀支部　会員情報</router-link></h3>
+							<p>SHIGA BRANCH</p>
+						</li>
+						<li>
+							<h3><router-link to="/kyushu">九州支部　会員情報</router-link></h3>
+							<p>KYUSHU BRANCH</p>
+						</li>
+						<li>
+							<h3><router-link to="/shizouka">静岡支部　会員情報</router-link></h3>
+							<p>SHIZUOKA BRANCH</p>
+						</li>
+					</ul>
+				</div>
+            </div>
+        
+			<div id="nagoyaTable">
+				<div class="memberlist">
+					<table>
+						<tbody>
+							<tr>
+								<th class="head" rowspan="2">支部長</th>
+								<td>（株）Rian</td>
+								<td>大島　広照</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									〒４６３－００５７　愛知県名古屋市守山区中新１０－１０
+									[auth]TEL:052－793－9187[/auth]
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+            </div>
+
+			<div id="osakaTable">
+				<div class="memberlist">
+					<table>
+						<tbody>
+							<tr>
+								<th class="head" rowspan="2">支部長</th>
+								<td>㈲アパカバール</td>
+								<td>中野 訓延</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									〒599-8123　大阪府堺市東区北野田４８－１ 北野田第1ビル３Ｆ
+									[auth]TEL:072-234-6279[/auth]
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div id="shikokuTable">
+				<div class="memberlist">
+					<table>
+						<tbody>
+							<tr>
+								<th class="head" rowspan="2">支部長</th>
+								<td>有限会社　花もり</td>
+								<td>古市　亮</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									〒760－0014　香川県高松市昭和町1－12-3
+									[auth]TEL:087－813－1159[/auth]
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div id="naganoTable">
+				<div class="memberlist">
+					<table>
+						<tbody>
+							<tr>
+								<th class="head" rowspan="2">支部長</th>
+								<td>(有)大和インターナショナル</td>
+								<td>遠山　一行</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									〒399-8205　長野県安曇野市豊科４７８－３
+									[auth]TEL:０２６３－７２－２５１３[/auth]
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div id="hiroshimaTable">
+				<div class="memberlist">
+					<table>
+						<tbody>
+							<tr>
+								<th class="head" rowspan="2">支部長</th>
+								<td>(株)ライブス</td>
+								<td>山村　朋之</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									〒745-0867　周南市新堀6634-1
+									[auth]TEL:0834-32-1754[/auth]
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div id="kyushuTable">
+				<div class="memberlist">
+					<table>
+						<tbody>
+							<tr>
+								<th class="head" rowspan="2">支部長</th>
+								<td>株式会社　アルチザン</td>
+								<td>徳富　彰一</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									〒860-0845　熊本県熊本市中央区上通町6-15  t-fourﾋﾞﾙ3F
+									[auth]TEL:096-324-2244[/auth]
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div id="shizoukaTable">
+				<div class="memberlist">
+					<table>
+						<tbody>
+							<tr>
+								<th class="head" rowspan="2">支部長</th>
+								<td>（株）ForestHill</td>
+								<td>森岡　良太</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									〒441-8112　愛知県豊橋市牧野町６７−１
+									[auth]TEL:0532-35-7755[/auth]
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			</div>
+        
+	</div><!-- END #main_col -->
+
+	<div id="side_col1" class="type2" v-if="$route.path !== '/'">
+		<div class="menu-organization-container">
+			<ul id="menu-organization" class="menu">
+				<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-3521">
+					<router-link to="/">会員情報</router-link>
+					<router-link to="/osaka">大阪支部支部　会員情報</router-link>
+					<router-link to="/nagoya">名古屋支部支部　会員情報</router-link>
+					<router-link to="/shikoku">長野支部支部　会員情報</router-link>
+					<router-link to="/nagano">四国支部支部　会員情報</router-link>
+					<router-link to="/shiga">広島支部支部　会員情報</router-link>
+					<router-link to="/hiroshima">滋賀支部支部　会員情報</router-link>
+					<router-link to="/kyushu">九州支部支部　会員情報</router-link>
+					<router-link to="/shizouka">静岡支部支部　会員情報</router-link>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://unpkg.com/vue-router@4"></script>
+<script>
+const Soshiki = { template: soshikiTable },
+	Osaka = {  template: osakaTable },
+	Nagoya = {  template: nagoyaTable },
+	Shikoku = {  template: shikokuTable },
+	Nagano = {  template: naganoTable },
+	Shiga = {  template: shigaTable },
+	Hiroshima = {  template: hiroshimaTable },
+	Kyushu = {  template: kyushuTable },
+	Shizuoka = { template: shizoukaTable },
+	
+	routes = [
+		{ path: '/', component: Soshiki },
+		{ path: '/osaka', component: Osaka },
+		{ path: '/nagoya', component: Nagoya },
+		{ path: '/shikoku', component: Shikoku },
+		{ path: '/nagano', component: Nagano },
+		{ path: '/shiga', component: Shiga },
+		{ path: '/hiroshima', component: Hiroshima },
+		{ path: '/kyushu', component: Kyushu },
+		{ path: '/shizouka', component: Shizuoka }
+	],
+
+	router = VueRouter.createRouter({
+		history: VueRouter.createWebHashHistory(),
+		routes
+	}),
+
+	{ createApp } = Vue,
+
+	app = Vue.createApp()
+
+app.use(router)
+app.mount('#app')
+</script>
+
+<?php get_footer() ?>
